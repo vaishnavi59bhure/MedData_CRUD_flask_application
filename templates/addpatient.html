@@ -1,0 +1,47 @@
+{% include "header.html" %}
+
+{% block body %}
+
+<div class="panel=heading">
+    <h3>Add Patient <a class="pull-right btn btn-success" href="/">Back</a> </h3>
+</div>
+
+<div class="panel-body">
+    <form action="{{ url_for('processlist') }}" method="post">
+    <div class="form-group">
+
+        <label for="name">Patient Name</label>
+        <input type="text" class="form-control" name="name" id="name" required = "1"  >
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="name">Patient Age</label>
+        <input type="text" class="form-control" name="age" id="age" required = "1" >
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="name">Patient Gender</label>
+        <input type="text" class="form-control" name="gender" id="gender" required = "1"  >
+
+    </div>
+
+
+    <div class="form-group">
+        <input type="hidden" name="id" value="1">
+
+        <input type="hidden" name="action" value="edit">
+        <input type="submit" class="btn btn-success" name="submit" value="Add Patient">
+
+    </div>
+
+    </form>
+
+</div>
+
+{% endblock %}
+
+{% include "footer.html" %}
